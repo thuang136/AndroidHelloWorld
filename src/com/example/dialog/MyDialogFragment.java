@@ -18,6 +18,8 @@ public class MyDialogFragment extends DialogFragment{
 	CharSequence[] items = {"Google","Apple","Microsoft"};
 	boolean[] itemChecked = new boolean[items.length];
 	
+	int request_code = 1;
+	
 	public Dialog onCreateDialog(Bundle savedInstanceState) {
 		final Activity activity = this.getActivity();
 		return new AlertDialog.Builder(activity).setIcon(R.drawable.ic_launcher)
@@ -37,7 +39,7 @@ public class MyDialogFragment extends DialogFragment{
 								try {
 									Thread.sleep(5000);
 									progressDialog.dismiss();
-									activity.startActivity(new Intent("com.example.dialog.FragmentActivity"));
+									activity.startActivityForResult(new Intent("com.example.dialog.FragmentActivity"),request_code);
 								} catch (InterruptedException e) {
 									// TODO Auto-generated catch block
 									e.printStackTrace();

@@ -15,6 +15,12 @@
         android:textSize="25sp"
         />
     
-
+    <Button 
+        android:id="@+id/btnFrag2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="click me"
+        android:onClick="onClick"
+        />
 
 </LinearLayout>

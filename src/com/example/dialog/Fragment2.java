@@ -1,10 +1,14 @@
 package com.example.dialog;
 
+import android.app.Activity;
 import android.app.Fragment;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 public class Fragment2 extends Fragment{
 
@@ -12,4 +16,25 @@ public class Fragment2 extends Fragment{
             Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment2, container,false);
     }
+    
+    
+    public void onStart()
+    {
+    	super.onStart();
+    	Button btn = (Button)this.getActivity().findViewById(R.id.btnFrag2);
+    	btn.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent data = new Intent();
+		    	data.setData(Uri.parse("in fragment2"));
+		    	Activity activity = Fragment2.this.getActivity();
+		    	activity.setResult(Activity.RESULT_OK, data);
+		    	activity.finish();
+			}
+		});
+    	
+    }
+
 }

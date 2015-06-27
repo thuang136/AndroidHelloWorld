@@ -3,7 +3,9 @@ package com.example.dialog;
 
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Toast;
 
 public class DialogActivity  extends Activity{
 	
@@ -20,6 +22,16 @@ public class DialogActivity  extends Activity{
 		dialog.show(getFragmentManager(), "showDialog");
 	}
 	
+	public void onActivityResult(int requestCode, int resultCode, Intent data) 
+	{
+		if(requestCode == 1)
+		{
+			if(resultCode == RESULT_OK)
+			{
+				Toast.makeText(this, data.getData().toString(), Toast.LENGTH_SHORT).show();
+			}
+		}
+    }
 	
 	
 
