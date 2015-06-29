@@ -9,7 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-
+import com.example.contentProvider.*;
 public class Fragment1 extends Fragment{
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

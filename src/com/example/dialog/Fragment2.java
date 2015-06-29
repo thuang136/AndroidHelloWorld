@@ -5,11 +5,12 @@ import android.app.Fragment;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-
+import com.example.contentProvider.*;
 public class Fragment2 extends Fragment{
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -35,6 +36,61 @@ public class Fragment2 extends Fragment{
 			}
 		});
     	
+    	Log.d("fragment","onStart");
+    	
     }
-
+    
+    public void onAttach(Activity activity)
+    {
+    	super.onAttach(activity);
+    	Log.d("fragment","onAttach");
+    }
+    
+    public void onCreate(Bundle savedInstanceState)
+    {
+    	super.onCreate(savedInstanceState);
+    	Log.d("fragment","onCreate");
+    }
+    
+    public void onActivityCreated(Bundle savedInstanceState) 
+    {
+    	super.onActivityCreated(savedInstanceState);
+    	Log.d("fragment","onActivityCreated");
+    }
+    
+    public void onResume()
+    {
+    	super.onResume();
+    	Log.d("fragment","onResume");
+    }
+    
+    public void onPause()
+    {
+    	super.onPause();
+    	Log.d("fragment","onPause");
+    }
+    
+    public void onStop()
+    {
+    	super.onStop();
+    	Log.d("fragment","onStop");
+    }
+    
+    public void onDestroyView()
+    {
+    	super.onDestroyView();
+    	Log.d("fragment","onDestroyView");
+    }
+    
+    public void onDestroy()
+    {
+    	super.onDestroy();
+    	Log.d("fragment","onDestroy");
+    }
+    
+    public void onDetach()
+    {
+    	super.onDetach();
+    	Log.d("fragment","onDetach");
+    }
 }

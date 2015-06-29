@@ -10,7 +10,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
-
+import com.example.contentProvider.*;
 
 
 public class MyDialogFragment extends DialogFragment{

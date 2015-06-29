@@ -2,7 +2,7 @@ package com.example.helloworld;
 
 
 
-import com.example.dialog.R;
+import com.example.contentProvider.R;
 
 import android.app.Activity;
 import android.os.Bundle;

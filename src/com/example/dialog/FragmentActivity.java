@@ -39,6 +39,8 @@ public class FragmentActivity extends Activity{
 			 fragmentTransaction.replace(android.R.id.content, fragment2);
 		 }
 		 
+		 fragmentTransaction.addToBackStack(null);
+		 
 		 fragmentTransaction.commit();
 		 
 	 }
